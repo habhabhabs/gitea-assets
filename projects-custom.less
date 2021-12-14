@@ -1,5 +1,5 @@
 .board {
-  display: center;
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -53,6 +53,15 @@
   flex-direction: column;
 }
 
+.board-column-nodrag > .cards {
+  flex: 1;
+  display: flex;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-wrap: nowrap !important;
+  flex-direction: column;
+}
+
 .project-board-title {
   word-break: break-word;
 }
@@ -61,11 +70,23 @@
   margin: 5px 0;
 }
 
+.board-column-nodrag > .divider {
+  margin: 5px 0;
+}
+
 .board-column:first-child {
   margin-left: auto !important;
 }
 
 .board-column:last-child {
+  margin-right: auto !important;
+}
+
+.board-column-nodrag:first-child {
+  margin-left: auto !important;
+}
+
+.board-column-nodrag:last-child {
   margin-right: auto !important;
 }
 
